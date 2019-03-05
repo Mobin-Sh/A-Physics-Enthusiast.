@@ -1,6 +1,6 @@
 # Welcome
 I'm Mobin Shakeri.
-Check out about group theory. [Link](www.mobins.tk/grouptheory)
+Check out about [group theory](grouptheory).
 
 ## Header 2
 ### Header 3
