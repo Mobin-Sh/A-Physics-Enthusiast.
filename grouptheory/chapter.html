@@ -1,0 +1,199 @@
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script> 
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
+
+
+<!DOCTYPE html>
+
+<style>
+.formula{
+    background-color:#379683;
+    padding: 5px;
+    color:#EDF5E1;
+    font-size:22px;
+    font-weight: bold;   
+}
+.plaintext{
+    text-align:justify;  
+    color:#05386B;
+    font-size:22px;
+    text-justify: inter-word;
+}
+ h2{
+    color:#05386B;
+    font-size:30px;
+}
+ h1{
+    color:#05386B;
+    font-size:50px;
+}
+header{
+    text-align:center; 
+}
+nav{
+    text-align:center; 
+}
+body{ 
+    background-color:#5CDB95;
+    font-family: Helvetica Neue, Helvetica,sans-serif, Arial ;
+}
+aside {
+  color:#8EE4AF;
+  float: left;
+  width: 20%;
+  background: #379683;
+  padding: 15px;
+  font-size:17px;
+  text-align:center; 
+}
+section {
+  float: right;
+  margin-right:10%;
+  width: 60%;
+}
+
+hr{
+color: #05386B;
+}
+.hr1{
+color: #5CDB95;
+}
+.copyright{
+font-size:12px;
+}
+
+footer{
+  text-align: center;
+  background: #379683;
+  padding: 10px;
+  clear: both;
+  color: #8EE4AF;
+  font-size:12px;
+}
+a:link, a:visited {
+  background-color: #379683;
+  border: none;
+  color: #8EE4AF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+a:hover, a:active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+
+<html>
+
+
+
+
+
+<header>
+<title>Gourp Theory</title>
+<h1>
+Group Theory
+</h1>
+</header>
+
+
+
+<nav>
+<div w3-include-html="topmenu.html"></div> 
+</nav>
+
+<hr>
+
+<aside>
+<b>Navigate Through Subjects:</b><br><br>
+<div w3-include-html="contents.html"></div> 
+
+<script>
+includeHTML();
+</script>
+
+
+<hr class="hr1">
+<p2 class="copyright">All The contents on this page are created and developed by Mobin Shakeri.<p2>
+</aside>
+
+<section>
+
+<body>
+
+
+
+<h2>1.Introduction</h2>
+
+
+<p class="plaintext">What is a group theory?<br>
+<b>Group theory</b> is a theory that studies a special creature in mathematics called <b>group</b>. But what is a group you might say? There are few axioms that define a group. Here are axioms of a group: Here are axioms of a group:</p>
+
+<p class="formula"><span class="math display">\[(G, \circ ) \;\;\;\;\;\;\;\;
+\circ : G \times G \to G\]
+1)Identity member: \[\exists e  \in G : \forall g \in G: eg=ge=g\]
+2)Inverse member: \[\forall g \in G: \exists g^{-1} \to g g^{-1} = g^{-1} g = e\]
+3)Associativity: \[\forall g,h,l \in G: g \circ (h \circ l) = (g \circ h ) \circ l\]</span></p>
+
+
+
+<br><br><br><br><br>
+</body>
+</section>
+
+
+
+<!-- Add icon library -->
+
+
+
+
+
+<footer>
+The website and all the contents inside are created by <b>Mobin Shakeri</b>, if not mentioned otherwise. All Rights Reserved.<br>
+Contact <b>Mobin.Shakeri[at]live.com</b>, if you had any questions or any suggestions.
+
+</footer>
+
+</html>
+
+
+
