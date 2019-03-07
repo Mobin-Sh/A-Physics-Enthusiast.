@@ -37,46 +37,48 @@ function includeHTML() {
 <!DOCTYPE html>
 
 <style>
- p{
-    background-color:#379683;
-    padding: 5px;
-    color:#EDF5E1;
-    font-size:22px;
-
-}
- p1{
-    color:#05386B;
-    font-size:22px;
-}
  h2{
     color:#05386B;
     font-size:30px;
 }
  h1{
     color:#05386B;
-    font-size:50px;
-
+    font-size: 250px;
+    /*new:*/
+    font-family: 'Times New Roman';
+    line-height: 200px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+     user-select: none; /* Standard */
 }
-body{
-    
+lefty{  
+    position: absolute;
+    top: 75px;
+    left: 225px;
+}
+righty{
+    position: absolute;  
+    top: 275px;
+    left: 350px;
+}
+header{
+    text-align:center;
+    height: 450px; 
+}
+nav{    
+    text-align:center; 
+}
+body{ 
+    text-align:center;
     background-color:#5CDB95;
-    font-family: Helvetica Neue, Helvetica,sans-serif, Arial ;
+    font-family: sans-serif, Arial, Helvetica Neue, Helvetica;
 }
-aside {
-  color:#8EE4AF;
-  float: left;
-  width: 20%;
-  #height: 300px; /* only for demonstration, should be removed */
-  background: #379683;
-  padding: 15px;
-  font-size:17px;
+div{ 
+    display: inline-block;
+    background-color:#379683;
+    max-width:400px;
 }
-section {
-  float: right;
-  margin-right:10%;
-  width: 60%;
-}
-
 hr{
 color: #05386B;
 }
@@ -85,6 +87,7 @@ color: #5CDB95;
 }
 .copyright{
 font-size:12px;
+color:#EDF5E1;
 }
 
 footer{
@@ -112,76 +115,61 @@ a:hover, a:active {
   background-color: #4CAF50;
   color: white;
 }
+subt{
+    width:250px;
+    color:#05386B; 
+    position: absolute; 
+    top: 475px; 
+    left: 250px; 
+    font-size:18px;
+    font-family: 'Times New Roman';
+    line-height: 20px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+     user-select: none; /* Standard */
+}
 
 </style>
 
 <html>
 
-
-
-<center>
+<title>Gourp Theory</title>
 
 <header>
-<title>Gourp Theory</title>
 <h1>
-Group Theory
+<lefty>Group</lefty> <br> 
+<righty>Theory</righty>
 </h1>
+<subt><br>
+*With Its' Applications In Physics</subt>
 </header>
 
 
 
 <nav>
-<div w3-include-html="topmenu.html"></div> 
+<a href="/index.html">Get Back Home</a> 
 </nav>
 
-<hr>
-
-<aside>
-<b>Navigate Through Subjects:</b><br><br>
-<div w3-include-html="contents.html"></div> 
-
-<script>
-includeHTML();
-</script>
-
-
-<hr class="hr1">
-<p2 class="copyright">All The contents on this page are created and developed by Mobin Shakeri.<p2>
-</aside>
-</center>
-<section>
 
 <body>
 
-
-
-<h2>1.Introduction</h2>
-
-
-<p1>Browsers usually insert quotation marks around the q element.Browsers usually insert quotation marks around the q element.Browsers usually insert quotation marks around the q element.Browsers usually insert quotation marks around the q element.Browsers usually insert quotation marks around the q element.</p1>
-
-<p><span class="math display">\[x^n + y^n = z^n\]</span></p>
-
-
-
-<p1>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p1>
-
-<br><br><br><br><br>
+<div>
+<br><p style="color:#EDF5E1;">Navigate Through Subjects:<p></b></b>
+<div w3-include-html="contents.html"></div> 
+<script>
+includeHTML();
+</script>
+<hr class="hr1">
+<p2 class="copyright">All The contents on this page are created and developed by Mobin Shakeri.<p2><br><br>
+</div>
+<br><br>
 </body>
-</section>
-
-
-
-<!-- Add icon library -->
-
-
-
-
+<br>
 
 <footer>
 The website and all the contents inside are created by <b>Mobin Shakeri</b>, if not mentioned otherwise. All Rights Reserved.<br>
 Contact <b>Mobin.Shakeri[at]live.com</b>, if you had any questions or any suggestions.
-
 </footer>
 
 </html>
