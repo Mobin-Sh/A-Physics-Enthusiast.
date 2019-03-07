@@ -32,6 +32,19 @@ function includeHTML() {
 };
 </script>
 
+<script>
+        function qs(search_for) {
+		var query = window.location.search.substring(1);
+		var parms = query.split('&');
+		for (var i=0; i<parms.length; i++) {
+			var pos = parms[i].indexOf('=');
+			if (pos > 0  && search_for == parms[i].substring(0,pos)) {
+				return parms[i].substring(pos+1);;
+			}
+		}
+		return "";
+	}
+</script>
 
 
 <!DOCTYPE html>
@@ -125,8 +138,6 @@ a:hover, a:active {
 
 
 
-
-
 <header>
 <title>Gourp Theory</title>
 <h1>
@@ -161,18 +172,11 @@ includeHTML();
 
 
 
-<h2>1.Introduction</h2>
+<script>
 
+document.write('<div w3-include-html="part'+qs("part")+'.html"></div>')
 
-<p class="plaintext">What is a group theory?<br>
-<b>Group theory</b> is a theory that studies a special creature in mathematics called <b>group</b>. But what is a group you might say? There are few axioms that define a group. Here are axioms of a group: Here are axioms of a group:</p>
-
-<p class="formula"><span class="math display">\[(G, \circ ) \;\;\;\;\;\;\;\;
-\circ : G \times G \to G\]
-1)Identity member: \[\exists e  \in G : \forall g \in G: eg=ge=g\]
-2)Inverse member: \[\forall g \in G: \exists g^{-1} \to g g^{-1} = g^{-1} g = e\]
-3)Associativity: \[\forall g,h,l \in G: g \circ (h \circ l) = (g \circ h ) \circ l\]</span></p>
-
+</script>
 
 
 <br><br><br><br><br>
