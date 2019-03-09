@@ -1,0 +1,39 @@
+<h1 id="examples-of-groups">Examples of Groups</h1>
+<p>The best way to understand the power of groups is to see some of its’ examples. So let’s examine some of the most famous examples of group theory.</p>
+<h2 id="mathbbz" class="unnumbered">(<span class="math inline">\(\mathbb{Z}\)</span>,+)</h2>
+<p>OK, let’s check if <span class="math inline">\(\mathbb{Z}\)</span> is a group under the operation common +. We already know that sum of two integer is an integer, therefor the set is <strong>closed</strong> under +. First let’s check for an <strong>identity member</strong> <span class="math inline">\(e\)</span>. We can easily see that our identity member is <span class="math inline">\(e=0\)</span> here, since <span class="math inline">\(0+g=g+0=g, \forall g \in \mathbb{Z}\)</span> .</p>
+<p>Do we have an <strong>inverse member</strong> for all of our members inside our set? Yes. For all <span class="math inline">\(g \in\mathbb{Z}\)</span> we have <span class="math inline">\(-g\)</span> as its’ inverse, since <span class="math inline">\(g + (-g) = (-g) + g = 0 = e\)</span>. Since we already know that common + is <strong>associative</strong>, then the (<span class="math inline">\(\mathbb{Z}\)</span>,+) is a group. That easy. The first example of a group.</p>
+<h2 id="mathbbrtimes" class="unnumbered">(<span class="math inline">\(\mathbb{R}^{+}\)</span>,<span class="math inline">\(\times\)</span>)</h2>
+<p>By <span class="math inline">\(\mathbb{R}^{+}\)</span> we mean <span class="math inline">\(\{ r \in \mathbb{R} | r&gt;0 \}\)</span>. So is it <strong>closed</strong>? It is obvious that multiplication of two strictly positive numbers produce a strictly positive number. So yes.</p>
+<p>Do we have an <strong>identity member</strong> for this group? Well, what is a strictly positive real number, that when it is multiplied by another number, it gives us the same one? Our identity is <span class="math inline">\(e=1\)</span>. What about an <strong>inverse member</strong>? Well the inverse of <span class="math inline">\(g \in \mathbb{R}^{+}\)</span> is <span class="math inline">\(\frac{1}{g}\)</span>, since <span class="math inline">\(\frac{1}{g} \times g = g \times \frac{1}{g} = 1 = e\)</span>. And you can check that <span class="math inline">\(\frac{1}{g}\)</span> is also both positive and real, therefor a member of <span class="math inline">\(\mathbb{R}^{+}\)</span>.</p>
+<p>The last axiom talks about <strong>associativity</strong>. We know that the common <span class="math inline">\(\times\)</span> is associative for real numbers. Therefor this <span class="math inline">\((\mathbb{R}^{+}\)</span>,<span class="math inline">\(\times)\)</span> is also another example for groups.</p>
+<h2 id="times" class="unnumbered">(<span class="math inline">\(\{1,-1\}\)</span>,<span class="math inline">\(\times\)</span>)</h2>
+<p>We have covered the <strong>closure</strong> of this group in the previous section. The <strong>identity member</strong> of this small set is <span class="math inline">\(e=1\)</span>. We can see that aside from the <strong>inverse</strong> of the identity member, which is always itself, the inverse of <span class="math inline">\(-1\)</span> is also itself, since <span class="math inline">\(-1 \times -1 = 1 = e\)</span>. Lastly by knowing that <strong>associativity</strong> is true for this set (groups’ sets with less than 3 members are always associative), we’ve proved that this small set with common <span class="math inline">\(\times\)</span>, is actually a group.</p>
+<p>Until now we’ve just shown collection of sets and operations which are groups. Let’s see the next two examples which look like groups, but in fact they are not groups.</p>
+<h2 id="mathbbrtimes" class="unnumbered">(<span class="math inline">\(\mathbb{R}\)</span>,<span class="math inline">\(\times\)</span>)</h2>
+<p>Well. This seems like a group, but it’s not. You can see that <strong><span class="math inline">\(1=e\)</span></strong>, since 1 times any reals number is that number itself. You can also see that this operation is <strong>associative</strong>. The problem we have here is with the <strong>inverse member</strong>. At the first glance <span class="math inline">\(\forall g \in \mathbb{R}\)</span> the <span class="math inline">\(\frac{1}{g}\)</span> seems like a legit inverse member, and we might mistakenly think that this is a group, but our problem is with the inverse of <span class="math inline">\(0\)</span>. Since <span class="math inline">\(\frac{1}{0}\)</span> is not defined inside real numbers, then 0 is not invertible, and this (<span class="math inline">\(\mathbb{R}\)</span>,<span class="math inline">\(\times\)</span>) is <strong>not</strong> a group. Now you can see why we’ve chosen <span class="math inline">\(\mathbb{R}^{+}\)</span> to be our set in our previous examples. By removing zero from the set, everything will be fine. So (<span class="math inline">\(\mathbb{R} - \{ 0 \}\)</span>,<span class="math inline">\(\times\)</span>) is in fact also a group.</p>
+<h2 id="a-b-c-ast" class="unnumbered">(<span class="math inline">\(\{ a, b, c \}\)</span>,<span class="math inline">\(\ast\)</span>)</h2>
+<p>This is an example that I’ve came up with, and I have a purpose for mentioning this. This <span class="math inline">\(\ast\)</span> is actually not any common or previously known operation. This operation is defined this way:</p>
+<div class="formula">
+<p><span class="math display">\[a \ast b = b \ast a = c \label{eq:4}\]</span></p>
+<p><span class="math display">\[b \ast c = c \ast b = a\]</span></p>
+<p><span class="math display">\[c \ast a = a \ast c = b\]</span></p>
+<p><span class="math display">\[a \ast a = b\]</span></p>
+<p><span class="math display">\[b \ast b = c\]</span></p>
+<p><span class="math display">\[c \ast c = a \label{eq:5}\]</span></p>
+</div>
+<p>So the <span class="math inline">\(\ast\)</span> of any two members is the other member. So the question is: Is it a group?</p>
+<p>Well, even though it is <strong>closed</strong>, we can see that there is no <strong>identity member</strong>. So it is obviously not a group. But let’s check the other characteristics of this set and operation.</p>
+<p>Well you can see that since we don’t have any identity member, we cannot have any <strong>inverse member</strong>, because an inverse member <span class="math inline">\({g}^{-1}\)</span> is a member which <span class="math inline">\({g}^{-1} \ast g = e\)</span>. Let’s check if this operation is <strong>associative</strong>. We’ll check an example, using the defining relations for <span class="math inline">\(\ast\)</span>:</p>
+<div class="formula">
+<p><span class="math display">\[(a \ast b) \ast c \stackrel{?}{=} a \ast (b \ast c)\]</span></p>
+<p><span class="math display">\[(c) \ast c \stackrel{?}{=} a \ast (a)\]</span></p>
+<p><span class="math display">\[a \neq b\]</span></p>
+</div>
+<p>By this single example we can see that <span class="math inline">\(\ast\)</span> is not generally an associative operation (note that we had to check every single combination of <span class="math inline">\(a,b,c\)</span> for their associativity, if we’d wanted to prove that). So, even though this seems like a group, it does not fulfill any three of group axioms. I’ve brought this example to create an insight, that these kinds of structures of closed sets which make a roundabout with an operation within its’ members, are not what we deal with in group theory. We have <em>Cyclic groups</em>, but they are totally different structures. We are going to talk about them in the future.<br />
+<br />
+</p>
+<p>So here were some basic examples of group theory. Let’s go for more handy examples of groups, and from now on, try to check for yourself, if these examples are groups or not, before reading the answers.
+<br /><br />
+(Continue on part (2) of this chapter, to get more examples for group theory.)
+</p>
