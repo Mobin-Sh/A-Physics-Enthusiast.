@@ -1,0 +1,118 @@
+<h2 id="symmetry-and-permutation-groups">Symmetry and Permutation Groups</h2>
+<p>Symmetry and Permutation groups are one of the most famous examples for group theory. Regardless of you intentions with group theory, you are going to encounter with them many times in group theory. This is both generally and historically, an important example.</p>
+<p>Imagine you have a set of <span class="math inline">\(n\)</span> different objects with a specific position, numbering these positions as <span class="math inline">\(1, 2, \cdots, n\)</span>. A permutation of them is any change of their orders, and we can refer it as a function <span class="math inline">\(p\)</span> which changes our position a to b like <span class="math inline">\(p(a)=b\)</span>.</p>
+<p>As an example, imagine an arbitrary <span class="math inline">\(p\)</span> for <span class="math inline">\(n=3\)</span> that p(1)=2, p(2)=1, and p(3)=3. The following notation is often used, because of its’ simplicity, and it is called <em>Cauchy’s two line notation</em>.</p>
+<p><span class="math display">\[p=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3\\
+2 &amp; 1 &amp; 3
+\end{pmatrix}\]</span></p>
+<p>By comparing the first and the second rows, you can see that 1 goes to 2, 2 goes to 1, and 3 is remained unchanged. Notice that the order of columns does not matter, for example, the following representation is also showing the same function as before:</p>
+<p><span class="math display">\[p=
+\begin{pmatrix}
+3 &amp; 1 &amp; 2\\
+3 &amp; 2 &amp; 1
+\end{pmatrix}\]</span></p>
+<p>Now that we are familiar with the notation, let’s define our group. The set of <strong>all</strong> the possible permutations of <span class="math inline">\(n\)</span> positions, along with the operation of <strong>Composition of Permutations</strong> is called <em>Symmetry Group</em>, and is denoted as <span class="math inline">\(S_n\)</span>. let’s talk about that in detail.</p>
+<p>Imagine <span class="math inline">\(n=2\)</span>. From the basic combinatorics, you know that the total amount of possible permutation of <span class="math inline">\(n\)</span> member is <span class="math inline">\(n!\)</span>. So for <span class="math inline">\(n=2\)</span>, we have <span class="math inline">\(2!=2\)</span> members. These member are as below: <span class="math display">\[\{ e=
+\begin{pmatrix}
+1 &amp; 2 \\
+1 &amp; 2 
+\end{pmatrix},
+\alpha=
+\begin{pmatrix}
+1 &amp; 2 \\
+2 &amp; 1 
+\end{pmatrix} \}\]</span></p>
+<p>We can say the <strong>Order</strong> of symmetry group <span class="math inline">\(S_n\)</span> is <span class="math inline">\(n!\)</span>, and this <em>order</em> means the number of members in a group’s set. Now that we know about the set in our group, let’s talk about the operation of the group. If <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are two members of <span class="math inline">\(S_n\)</span>, when we are saying <span class="math inline">\(\alpha \beta\)</span>, we mean first apply the permutation <span class="math inline">\(\beta\)</span>, and then apply <span class="math inline">\(alpha\)</span>. This is called <em>composition of functions</em> and is defined as below.</p>
+<p><span class="math display">\[(\alpha \beta)(x) = \alpha( \beta(x))\]</span> So our operation in this group, often called <em>multiplication</em>, is simply a statement of the order of application. For our example, you can see that if you apply <span class="math inline">\(\alpha\)</span> twice, or <span class="math inline">\(\alpha \alpha (= \alpha^2)\)</span> you will get <span class="math inline">\(e\)</span>. At first, <span class="math inline">\(\alpha\)</span> changes the position of 1 to 2, and 2 to 1. With the second application, the 2 will get back to 1, and 1 to 2. We can write this characteristic this way:</p>
+<p><span class="math display">\[\alpha \alpha = e\]</span></p>
+<p>Let us examine a more complicated example of <span class="math inline">\(S_3\)</span>. This group’s order is <span class="math inline">\(3!=6\)</span>. Here are its’ 6 members of all the possible permutations of <span class="math inline">\(n=3\)</span> positions:</p>
+<p><span class="math display">\[\begin{aligned}
+\{
+e=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+1 &amp; 2 &amp; 3 
+\end{pmatrix},
+\alpha=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+1 &amp; 3 &amp; 2
+\end{pmatrix},
+\beta=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+3 &amp; 2 &amp; 1 
+\end{pmatrix},\\
+\gamma=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+2 &amp; 1 &amp; 3 
+\end{pmatrix},
+\delta=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+2 &amp; 3 &amp; 1 
+\end{pmatrix},
+\epsilon=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+3 &amp; 1 &amp; 2 
+\end{pmatrix},
+\}
+\end{aligned}\]</span></p>
+<p>Now let’s talk about the multiplication in this group. As an example, what will happen if you apply <span class="math inline">\(\epsilon\)</span> and then <span class="math inline">\(\alpha\)</span>? You should one by one check what will happen to each position after their successive application. For example, by knowing <span class="math inline">\(\epsilon (1)=3\)</span>, and <span class="math inline">\(\alpha (3)=2\)</span>, We’ll get <span class="math inline">\(\alpha \epsilon (1) = \alpha ( \epsilon (1)) = \alpha (3)=2\)</span>. Doing this for all three positions we will get:</p>
+<p><span class="math display">\[\alpha \epsilon = \begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+1 &amp; 3 &amp; 2
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+3 &amp; 1 &amp; 2 
+\end{pmatrix}=\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+2 &amp; 1 &amp; 3 
+\end{pmatrix}= \gamma\]</span></p>
+<p>Now we should do this for all of the possible combinations of our members. Obviously this could take a while. We can show the result of this calculation in a compact way called <em>Multiplication Table</em>, or <em>Cayley Table</em>. This is similar to the multiplication table of numbers we used way before, and each cell in this table shows the result of (row <span class="math inline">\(\circ\)</span> column). For <span class="math inline">\(S_3\)</span> we have:</p>
+
+<img src="Img\Table1-2.png" alt="Table 1-2" height="297" width="427" class="center"> 
+
+<p>As you’ve probably realized by now, groups can either have <strong>finite</strong> or <strong>infinite</strong> members, and these multiplication tables can be formed for any finite groups, and can carry important information about the group. First of all, any different combination and number of multiplication can be calculated using these tables. You can also check if a group is closed or not by looking at its’ multiplication table. For instance, <span class="math inline">\(S_3\)</span> is closed because every single value in the multiplication table is also a member of our group’s set. If you’ve formed the multiplication table for a structure, and you’ve encountered a member outside of your set in your table, then that structure cannot be a group because it lacks the closure.</p>
+<p>You can easily check if a system is Abelian or not too. If the table is symmetric from its’ diagonal line, then it is an Abelian group. You can check that <span class="math inline">\(S_3\)</span> is in fact not an Abelian group, and if you form the multiplication table for <span class="math inline">\(S_2\)</span>, you can see that group is Abelian. In fact, the only Abelian <span class="math inline">\(S_n\)</span> is <span class="math inline">\(S_2\)</span>.</p>
+<p>The other good advantage of multiplication table is that you can easily check for an identity member in it too. There should be one row and column that return the same values of the original members. These row and column usually take place at the first row/column, but generally, the order is arbitrary and it can be anywhere in our multiplication table. If you do not see any of these Identical set of rows and columns, then your structure is not a group.</p>
+<p>You can also check if there’s an inverse member for each of your group members from multiplication table. For this to be true, there should at least one identity member <span class="math inline">\(e\)</span>, in every column and row. And also check for these <span class="math inline">\(e\)</span><em>s</em>’ to be diagonally symmetrical. If these we not true for you multiplication table, then you are not dealing with a group.</p>
+<p>The only thing that is not obvious from the multiplication table is the associativity characteristic. To check if the operation is associative or not, you usually need to do some extra work. But still, the table can be useful to check three of the four defining characteristics of groups easily by a few glances, therefor it is pretty useful for finite (and of course low order) structures.</p>
+<p>OK, now let’s actually prove that <span class="math inline">\(S_n\)</span> is a group. By knowing that <span class="math inline">\(S_n\)</span> consists of all of the possible permutation, and by knowing combination of any two permutation is another permutation, we can be sure of its’ <strong>closure</strong>. There’s always a permutation which does not change any position, and we call it <span class="math inline">\(e\)</span>, our <strong>identity member</strong>. What about <strong>inverse member</strong>? Again, it’s easy to show that because <span class="math inline">\(S_n\)</span> consists of all of the possible permutation, there is always another member (could be itself) that does the opposite of the prior one. For our two line notation, to get inverse member of any permutation, just change the place of the rows, and you’ll end up with the inverse member. And it is obvious that this new permutation is also a member of our symmetry group!</p>
+<p>What about <strong>associativity</strong>? Well, this is a little bit trickier than the others. Our operation is the function composition for our permutation functions, and for associativity to be true, the following should be true for any three arbitrary <span class="math inline">\(\alpha, \beta,\)</span> and <span class="math inline">\(\gamma\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+\alpha \circ ( \beta \circ \gamma ) = ( \alpha \circ \beta ) \circ \gamma   \rightarrow 
+\alpha  ( \beta ( \gamma )) = ( \alpha ( \beta )) ( \gamma )
+\end{aligned}\]</span></p>
+<p>But this is true for any function, and because permutations are also functions, we know that associativity is true for <span class="math inline">\(S_n\)</span>, therefor they are groups.</p>
+<p>There’s another term called <em>Permutation Group</em>, and it is often misused instead of symmetry group. There lies a little bit of ambiguity between these two notions, and it is good to know that they are in fact different. Permutation group is any group that can be formed with the permutation functions, but the symmetry group is the group consisting of <strong>all</strong> of the permutations possible for <span class="math inline">\(n\)</span> positions. You can see that symmetry group is actually a special case of permutation group, and it is much more well know.</p>
+<p>Permutation groups are usually denoted in many particular ways, but we are not going to go through them one by one. As an example, take <span class="math inline">\(\epsilon\)</span>, <span class="math inline">\(\delta\)</span>, and <span class="math inline">\(e\)</span> from <span class="math inline">\(S_3\)</span>, and you can see that this set also forms a group, a permutation group (this group is actually called <span class="math inline">\(A3\)</span>), and you can see its’ multiplication table in the following Table Table 3.</p>
+
+<img src="Img\Table1-3.png" alt="Table 1-3" height="153" width="500" class="center"> 
+
+<p><span>Multiplication Table of an Example of a Permutation Group</span><span id="table3" label="table3">[table3]</span></p>
+<p>Before ending this section, it is good to mention another very well-known notation for permutations, other than our two line notation. This is called <em>cyclic notation</em> and it is used in many books. Instead of writing our permutation function in two lines, we will use only one line and we will write any two positions related to each other, successively. It can be best understood and explained with an example. For instance:</p>
+<p><span class="math display">\[\gamma=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+2 &amp; 1 &amp; 3 
+\end{pmatrix}=
+(1 \ 2)(3)\]</span></p>
+<p>To see how it works, you should start with a number. For example 1. The next number to 1 is 2. so <span class="math inline">\(\gamma (1)=2\)</span>, or 1 goes to 2. There is no number next to 2, and there’s only a closed parenthesis. When there is a closed parenthesis, go back to the start of that block’s opened parenthesis, and the first number is what 2 goes to. for our example, 2 goes to 1 or <span class="math inline">\(\gamma (2)=1\)</span>. For three, you can see it is in a separate parenthesis by itself, it means that 3 goes to itself or <span class="math inline">\(\gamma (3)=3\)</span>. Let’s check a more complicated case:</p>
+<p><span class="math display">\[\begin{aligned}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+5 &amp; 1 &amp; 3 &amp; 6 &amp; 2 &amp; 4
+\end{pmatrix}=
+(1 \ 5 \ 2 ) ( 6 \ 4 ) (3)= (3) ( 6 \ 4 ) (1 \ 5 \ 2 ) \\
+= (2 \ 1 \ 5 ) ( 4 \ 6 ) (3) =  (2 \ 1 \ 5 ) ( 4 \ 6 )
+\end{aligned}\]</span></p>
+<p>All of the written cyclic permutations are actually equivalent. let’s check that. For the first cyclic example we read it like (you can check their equivalent two line notation whilst reading): 1 goes to 5. 5 goes to 2. we’ve reached a closed parenthesis, then 2 goes all the way back to 1. Next block. 6 goes to 4, And 4 goes to back to start, 6. At the end, 3 goes to 3. This is how it works.</p>
+<p>You can see that you can change the position of different blocks, it does not matter. You can also shift the members inside any blocks, it’s still the same. Another thing is that people usually don’t write the single membered blocks like <span class="math inline">\((3)\)</span>, so it is up to you to mention them, or not. Each number is only mentioned once, so if you don’t see a number in this notation, that number returns to itself.</p>
+<p>And that’s it for this cyclic notation, a notation that is very commonly used for symmetric and permutation groups’ members.</p>
+
